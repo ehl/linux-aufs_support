@@ -38,7 +38,7 @@ If during the build you encounter an error like:
 linux-4.11.tar ... FAILED (unknown public key 79BE3E4300411886)
 ```
 
-Retrieves the missing key:
+Run:
 
 ```bash
 gpg --recv-keys 79BE3E4300411886
