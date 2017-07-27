@@ -1,4 +1,4 @@
-# Maintainer: Calimero <calimeroteknik@free.fr>
+# Maintainer: Herve ESTEGUET <rvesteg@gmail.com>
 
 pkgbase=linux-aufs_friendly  # Build kernel with a different name
 
@@ -34,7 +34,7 @@ _sha256sums=('SKIP'
              'SKIP'
              '9a10dc166ef275fe5958bcc2523a47c35d642a17f18ce8aaaecde615ce1c474f')
 
-## Fetch linux sources from ABS
+## Fetch linux sources
 if [ ! -d core-linux ];then
   ASPROOT=. asp checkout linux || exit 1
 fi
@@ -50,7 +50,7 @@ fi
 sed -i "s/^pkgbase=.*/pkgbase=${pkgbase}/" linux/repos/core-${CARCH}/PKGBUILD.core
 
 # Hack for AUR package naming
-pkgname="linux-aufs_friendly"
+pkgname="linux-aufs_support"
 
 ## Bootstrap build
 cp linux/repos/core-${CARCH}/* .
